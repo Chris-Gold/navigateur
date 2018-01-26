@@ -18,7 +18,6 @@ $(document).ready(function(){
 
 
     $(document).ready(function(){
-      setInterval(function(){
         $.ajax({ url: 'html/check.php',
                  data: {action: 'folder'},
                  type: 'post',
@@ -26,7 +25,6 @@ $(document).ready(function(){
                             $('.div1').html(output);
                           }
         });
-      }, 1000);
     });
 
 });
