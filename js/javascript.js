@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
     /*$(".div1").load("../navigateur/", function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
             alert("External content loaded successfully!");
@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 
     $(document).ready(function(){
+
         $.ajax({ url: 'html/check.php',
                  data: {action: 'folder'},
                  type: 'post',
@@ -25,6 +26,19 @@ $(document).ready(function(){
                             $('ul').html(output);
                     }
         });
+        
+
+        $("li").click(function(){
+            $.ajax({ url: 'html/check.php',
+                 data: {action: 'folderSuivant'},
+                 type: 'post',
+                 success: function(output) {
+                            $('ul').html(output);
+                    }
+            });
+        });
+
+
     });
 
-});
+
