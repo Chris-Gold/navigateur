@@ -9,16 +9,24 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     }
 }
 function folder(){
+
+    $chemin = shell_exec("pwd");
+    echo $chemin;
+
+
     $list = scandir('/var/www/navigateur');
     $max = sizeof($list);
-    //
-    print_r($list[3]);
+    $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
+    $a = "<a href=";
+    $iconFile = "<i class=\"fas fa-file col-2\"></i>";
+    $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
+
     for ($i=0; $i < $max; $i++) {
         if(strpos($list[$i],".") == true){
-            print $list[$i] . "</br>";
+            print $li .  $iconFile . $list[$i] . "</li>";
         }
         else{
-            print "<a href=" .$list[$i].">" .$list[$i]. "</a>"."</br>";
+            print $li . $iconFolder . $a .$list[$i].">" . $list[$i] . "</a>"."</li>";
         }
     }
   }

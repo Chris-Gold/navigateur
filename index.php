@@ -6,7 +6,10 @@
             <script src="js/javascript.js"></script>
         </head>
         <body>
-            <div class="div1 container jumbotron text-center">              
+            <div class="container jumbotron">  
+                <ul class="list-group">
+                
+                </ul>            
             </div>
             <?php include 'includes/base_js.html' ?>
         </body>

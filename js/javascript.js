@@ -22,7 +22,7 @@ $(document).ready(function(){
                  data: {action: 'folder'},
                  type: 'post',
                  success: function(output) {
-                            $('.div1').html(output);
+                            $('ul').html(output);
                           }
         });
     });
