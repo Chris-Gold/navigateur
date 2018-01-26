@@ -8,6 +8,9 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         break;
     }
 }
+
+    $baseFolder = "/var/www/navigateur";
+
 function folder(){
 
     $list = scandir('/var/www/navigateur');
