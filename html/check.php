@@ -19,7 +19,6 @@ function folder(){
     $list = scandir("/home");
     $max = sizeof($list);
     $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
-    $a = "<a href=";
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
 
@@ -35,10 +34,9 @@ function folder(){
 
   function folderSuivant(){
 
-    $list = scandir("/home");
+    $list = scandir("/home/laetitia");
     $max = sizeof($list);
     $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
-    $a = "<a href=";
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
 

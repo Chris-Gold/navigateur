@@ -31,7 +31,7 @@
         $("li").click(function(){
             $.ajax({ url: 'html/check.php',
                  data: {action: 'folderSuivant'},
-                 type: 'post',
+                 //type: 'post',
                  success: function(output) {
                             $('ul').html(output);
                     }
