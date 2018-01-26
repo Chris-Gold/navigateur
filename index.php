@@ -6,8 +6,7 @@
             <script src="js/javascript.js"></script>
         </head>
         <body>
-            <div class="div1 container jumbotron text-center">
-              <?php include 'html/check.php' ?>
+            <div class="div1 container jumbotron text-center">              
             </div>
             <?php include 'includes/base_js.html' ?>
         </body>
