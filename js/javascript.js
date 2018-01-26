@@ -16,5 +16,17 @@ $(document).ready(function(){
         alert(file);
     });*/
 
-    $(".div1")
+
+    $(document).ready(function(){
+      setInterval(function(){
+        $.ajax({ url: 'html/check.php',
+                 data: {action: 'folder'},
+                 type: 'post',
+                 success: function(output) {
+                            $('.div1').html(output);
+                          }
+        });
+      }, 1000);
+    });
+
 });

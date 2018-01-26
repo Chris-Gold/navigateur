@@ -7,18 +7,7 @@
         </head>
         <body>
             <div class="div1 container jumbotron text-center">
-                <?php $list = scandir('/var/www/navigateur'); 
-                $max = sizeof($list);
-                //              
-                print_r($list[3]);
-                for ($i=0; $i < $max; $i++) { 
-                    if(strpos($list[$i],".") == true){
-                        print $list[$i] . "</br>";
-                    }
-                    else{
-                        print "<a href=" .$list[$i].">" .$list[$i]. "</a>"."</br>";
-                    }
-                }?>
+              <?php include 'html/check.php' ?>
             </div>
             <?php include 'includes/base_js.html' ?>
         </body>
