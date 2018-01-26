@@ -23,7 +23,7 @@ $(document).ready(function(){
                  type: 'post',
                  success: function(output) {
                             $('ul').html(output);
-                          }
+                    }
         });
     });
 

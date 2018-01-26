@@ -10,10 +10,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 }
 function folder(){
 
-    $chemin = shell_exec("pwd");
-    echo $chemin;
-
-
     $list = scandir('/var/www/navigateur');
     $max = sizeof($list);
     $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
