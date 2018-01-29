@@ -20,15 +20,21 @@
     $(document).ready(function(){
 
         $.ajax({ url: 'html/check.php',
-                 data: {action: 'folder'},
+                 data: {action: 'folder', chemin: '/var/www/navigateur/'},
                  type: 'post',
                  success: function(output) {
-                            $('ul').html(output);
-                    }
+                    $('ul').html(output);
+                    $("li").click(function(){
+                        alert ("fbgkesdlf,gmlskrt");
+                    });
+                    
+                }
+            });
         });
         
 
-        $("li").click(function(){
+        /*$("li").click(function(){
+            alert ("fbgkesdlf,gmlskrt");
             $.ajax({ url: 'html/check.php',
                  data: {action: 'folderSuivant'},
                  //type: 'post',
@@ -36,9 +42,9 @@
                             $('ul').html(output);
                     }
             });
-        });
+        });*/
 
 
-    });
+   //});
 
 

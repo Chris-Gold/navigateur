@@ -12,11 +12,14 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     }
 }
 
-$chemin = "/home";
-
 function folder(){
 
-    $list = scandir("/home");
+    if(isset($_POST['chemin']) && !empty($_POST['chemin'])) {
+        $chemin = $_POST['chemin'];
+        echo $chemin;
+    }
+
+    $list = scandir($chemin);
     $max = sizeof($list);
     $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
