@@ -34,7 +34,7 @@ function folder(){
             print "<li class=\"" . "d-none" .   "\">". $list[$i] . "</li>";
         }
         if($list[$i] === ".."){
-            print "<button class=\"btn btn-warning\">\o/</button>";
+            print$li . " folder\"". $id . $list[$i]. "\">"."<button class=\"btn btn-warning\">\o/</button>" ."</li>";
         }
         else{
             print $li . " folder\"". $id . $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
