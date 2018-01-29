@@ -6,10 +6,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
-        case 'folderSuivant' :
-        folderSuivant();
-        break;
-    }
 }
 
 function folder(){
@@ -21,6 +17,7 @@ function folder(){
 
     if(isset($_POST['cheminSuite']) && !empty($_POST['cheminSuite'])) {
         $chemin = $chemin."/". $_POST['cheminSuite'];
+        echo $_POST['cheminSuite'];
         echo $chemin;
     }
 
@@ -38,24 +35,6 @@ function folder(){
         }
         else{
             print $li . "\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
-        }
-    }
-  }
-
-  function folderSuivant(){
-
-    $list = scandir("/home/laetitia");
-    $max = sizeof($list);
-    $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
-    $iconFile = "<i class=\"fas fa-file col-2\"></i>";
-    $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
-
-    for ($i=0; $i < $max; $i++) {
-        if(strpos($list[$i],".") == true){
-            print $li .  $iconFile . $list[$i] . "</li>";
-        }
-        else{
-            print $li . $iconFolder  .$list[$i] . "</li>";
         }
     }
   }
