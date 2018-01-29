@@ -24,7 +24,7 @@ function folder(){
 
     $list = scandir($chemin);
     $max = sizeof($list);
-    $li = "<li class=\"list-group-item d-flex align-items-center" ;
+    $li = "<li class=\"list-group-item d-flex align-items-center animated fadeIn" ;
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
     $id = "id=\"";

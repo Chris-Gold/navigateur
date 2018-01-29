@@ -18,7 +18,7 @@
             </script>
         </head>
         <body>
-            <h1 class="container text-center">NAVIGAJAXATOR</h1>
+            <h1 class="container text-center animated bounceInRight">NAVIGAJAXATOR</h1>
             <div class="container jumbotron">
                 <ul class="list-group text-center">
 
