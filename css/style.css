@@ -10,10 +10,21 @@ li .fa-folder {
 li .fa-file {
   color: pink; }
 
-.folder {
+.folder:hover {
   color: green; }
 
+.file:hover {
+  color: red; }
+
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 2em; } }
 h1 {
-  margin-bottom: 40px; }
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 30px; }
+  h1:hover {
+    color: red; }
 
 /*# sourceMappingURL=style.css.map */
