@@ -24,26 +24,11 @@ function listClick(id){
                         $("li[id]").on('click',(function(){
                             var id = $(this).attr('id');
                             listClick(id);
-                           // BindEventHandlers();
+                            BindEventHandlers();
                         })); 
                     }, 1000);          
                 }
             });
         });
-        
-
-        /*$("li").click(function(){
-            alert ("fbgkesdlf,gmlskrt");
-            $.ajax({ url: 'html/check.php',
-                 data: {action: 'folderSuivant'},
-                 //type: 'post',
-                 success: function(output) {
-                            $('ul').html(output);
-                    }
-            });
-        });*/
-
-
-   //});
 
 

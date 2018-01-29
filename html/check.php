@@ -7,9 +7,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
-        case 'folderSuite':
-        folder($_POST['cheminSuite']);
-        break;
     }
 }
 
@@ -21,11 +18,6 @@ function folder(){
         echo $chemin;
     }
 
-    /*if(isset($_POST['cheminSuite']) && !empty($_POST['cheminSuite'])) {
-        //$chemin = $chemin."/". $_POST['cheminSuite'];
-        echo $chemin;
-    }*/
-
     $list = scandir($chemin);
     $max = sizeof($list);
     $li = "<li class=\"list-group-item d-flex align-items-center" ;
@@ -34,12 +26,20 @@ function folder(){
     $id = "id=\"";
 
     for ($i=0; $i < $max; $i++) {
-        if(strpos($list[$i],".") == true){
-            print $li . " file\"" .  "\">". $iconFile . $list[$i] . "</li>";
+        $dotPos = strpos($list[$i],".");
+        if($dotPos == true){
+            print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
+        }
+        elseif($dotPos === 0 && $list[$i] != ".."){
+            print "<li class=\"" . "d-none" .   "\">". $list[$i] . "</li>";
+        }
+        if($list[$i] === ".."){
+            print "<button class=\"btn btn-warning\">\o/</button>";
         }
         else{
-            print $li . " folder\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
+            print $li . " folder\"". $id . $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
   }
-?>
+?> 
+
