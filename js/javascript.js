@@ -20,10 +20,12 @@ function listClick(id){
                 success: function(output) {
                     $('ul').html(output);
                     setInterval(function(){
-                        $("li[id]").click(function(){
+                        
+                        $("li[id]").on('click',(function(){
                             var id = $(this).attr('id');
                             listClick(id);
-                        }); 
+                           // BindEventHandlers();
+                        })); 
                     }, 1000);          
                 }
             });
