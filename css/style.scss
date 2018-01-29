@@ -1,7 +1,16 @@
+body{background-image: url('../images/navijax.jpg');}
+
+.jumbotron{
+  margin-top: 50px;
+  background-image:linear-gradient(grey,white,grey);
+}
+
 li{
   .fa-folder{color : blue;}
   .fa-file{color : pink;}
+
 }
+.folder{color : green;}
 h1{
   margin-bottom : 40px;
 }
