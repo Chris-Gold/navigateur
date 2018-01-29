@@ -18,10 +18,10 @@
             </script>
         </head>
         <body>
-            <div class="container jumbotron">  
-                <ul class="list-group">
-                
-                </ul>            
+            <div class="container jumbotron">
+                <ul class="list-group text-center">
+
+                </ul>
             </div>
             <?php include 'includes/base_js.html' ?>
         </body>
