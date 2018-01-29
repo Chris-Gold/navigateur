@@ -19,7 +19,9 @@
         </head>
         <body>
             <h1 class="container text-center animated bounceInRight">NAVIGAJAXATOR</h1>
+
             <div class="container jumbotron">
+              <span id="chemin"></span>
                 <ul class="list-group text-center">
 
                 </ul>
