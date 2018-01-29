@@ -1,6 +1,9 @@
+var chemin = '/var/www/navigateur'
+
 function listClick(id){
+    chemin = chemin + "/" + id;
     $.ajax({ url: 'html/check.php',
-        data: {action: 'folder', cheminSuite: id},
+        data: {action: 'folder', chemin: chemin},
         type: 'post',
         success: function(output) {
             $('ul').html(output);
@@ -12,14 +15,16 @@ function listClick(id){
     $(document).ready(function(){
 
         $.ajax({ url: 'html/check.php',
-                data: {action: 'folder', chemin: '/var/www/navigateur/'},
+                data: {action: 'folder', chemin: chemin},
                 type: 'post',
                 success: function(output) {
                     $('ul').html(output);
-                    $("li[id]").click(function(){
-                        var id = $(this).attr('id');
-                        listClick(id);
-                    });                    
+                    setInterval(function(){
+                        $("li[id]").click(function(){
+                            var id = $(this).attr('id');
+                            listClick(id);
+                        }); 
+                    }, 1000);          
                 }
             });
         });

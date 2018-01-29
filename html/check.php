@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
 
@@ -6,8 +7,12 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
+        case 'folderSuite':
+        folder($_POST['cheminSuite']);
+        break;
     }
 }
+
 
 function folder(){
 
@@ -16,11 +21,10 @@ function folder(){
         echo $chemin;
     }
 
-    if(isset($_POST['cheminSuite']) && !empty($_POST['cheminSuite'])) {
-        $chemin = $chemin."/". $_POST['cheminSuite'];
-        echo $_POST['cheminSuite'];
+    /*if(isset($_POST['cheminSuite']) && !empty($_POST['cheminSuite'])) {
+        //$chemin = $chemin."/". $_POST['cheminSuite'];
         echo $chemin;
-    }
+    }*/
 
     $list = scandir($chemin);
     $max = sizeof($list);
