@@ -26,7 +26,7 @@ function folder(){
 
     $list = scandir($chemin);
     $max = sizeof($list);
-    $li = "<li class=\"list-group-item d-flex align-items-center\"" ;
+    $li = "<li class=\"list-group-item d-flex align-items-center" ;
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
     $id = "id=\"";
@@ -34,10 +34,10 @@ function folder(){
     for ($i=0; $i < $max; $i++) {
         if(strpos($list[$i],".") == true){
             $idLi = substr($list[$i], 0, strpos($list[$i], "."));
-            print $li . $id .$idLi. "\">". $iconFile . $list[$i] . "</li>";
+            print $li . "\"" . $id .$idLi. "\">". $iconFile . $list[$i] . "</li>";
         }
         else{
-            print $li . $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
+            print $li . "\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
   }
