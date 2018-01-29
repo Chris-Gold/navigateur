@@ -30,13 +30,13 @@ function folder(){
         if($dotPos == true){
             print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
         }
+        if($dotPos === 0 && $list[$i] == ".."){
+            print $li . " folder\"". $id . $list[$i]. "\">"."<button class=\"btn btn-warning\">Back_\o/</button>" ."</li>";
+        }
         if($dotPos === 0 && $list[$i] != ".."){
             print "<li class=\"" . "d-none" .   "\">". $list[$i] . "</li>";
         }
-        /*if($dotPos === 0 && $list[$i] == ".."){
-            print $li . " folder\"". $id . $list[$i]. "\">"."<button class=\"btn btn-warning\">Back_\o/</button>" ."</li>";
-        }*/
-        elseif($dotPos == false){
+        elseif($dotPos == false && $list[$i] != ".."){
             print $li . " folder\"". $id . $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
