@@ -25,7 +25,9 @@
                  success: function(output) {
                     $('ul').html(output);
                     $("li").click(function(){
-                        alert ("fbgkesdlf,gmlskrt");
+                        data: {cheminSuite: $(this).attr('id')}
+                        //var test = $(this).attr('id');
+                        //alert (test);
                     });
                     
                 }
