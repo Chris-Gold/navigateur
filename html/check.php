@@ -31,11 +31,11 @@ function folder(){
 
     for ($i=0; $i < $max; $i++) {
         if(strpos($list[$i],".") == true){
-            print $li . "\"" .  "\">". $iconFile . $list[$i] . "</li>";
+            print $li . " file\"" .  "\">". $iconFile . $list[$i] . "</li>";
         }
         else{
-            print $li . "\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
+            print $li . " folder\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
-  }  
+  }
 ?>
