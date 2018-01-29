@@ -6,6 +6,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
+    }
 }
 
 function folder(){
@@ -30,12 +31,11 @@ function folder(){
 
     for ($i=0; $i < $max; $i++) {
         if(strpos($list[$i],".") == true){
-            $idLi = substr($list[$i], 0, strpos($list[$i], "."));
-            print $li . "\"" . $id .$idLi. "\">". $iconFile . $list[$i] . "</li>";
+            print $li . "\"" .  "\">". $iconFile . $list[$i] . "</li>";
         }
         else{
             print $li . "\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
-  }
+  }  
 ?>
