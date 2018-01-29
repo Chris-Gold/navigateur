@@ -15,7 +15,7 @@ function folder(){
 
     if(isset($_POST['chemin']) && !empty($_POST['chemin'])) {
         $chemin = $_POST['chemin'];
-        echo $chemin;
+        //echo $chemin;
     }
 
     $list = scandir($chemin);
