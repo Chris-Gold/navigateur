@@ -1,0 +1,55 @@
+/*
+Error: Invalid CSS after "  .far {color: ": expected expression (e.g. 1px, bold), was "}"
+        on line 2 of style.scss
+
+1: li{
+2:   .far {color: }
+3:   .
+4: }
+
+Backtrace:
+style.scss:2
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1278:in `expected'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/script/lexer.rb:231:in `expected!'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/script/parser.rb:724:in `assert_expr'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/script/parser.rb:68:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1134:in `sass_script'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:988:in `value!'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:796:in `block in try_declaration'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1254:in `rethrow'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:809:in `try_declaration'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:697:in `block_child'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:686:in `block_contents'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:678:in `block'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:697:in `block_child'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:686:in `block_contents'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:678:in `block'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:670:in `ruleset'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:696:in `block_child'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:686:in `block_contents'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:137:in `stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:41:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:414:in `_to_tree'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/var/lib/gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/var/lib/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  .far {color: \": expected expression (e.g. 1px, bold), was \"}\"\A         on line 2 of style.scss\A \A 1: li{\A 2:   .far {color: }\A 3:   .\A 4: }"; }
