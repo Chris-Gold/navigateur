@@ -19,18 +19,25 @@ function folder(){
         echo $chemin;
     }
 
+    if(isset($_POST['cheminSuite']) && !empty($_POST['cheminSuite'])) {
+        $chemin = $chemin."/". $_POST['cheminSuite'];
+        echo $chemin;
+    }
+
     $list = scandir($chemin);
     $max = sizeof($list);
-    $li = "<li class=\"list-group-item d-flex align-items-center\">" ;
+    $li = "<li class=\"list-group-item d-flex align-items-center" ;
     $iconFile = "<i class=\"fas fa-file col-2\"></i>";
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
+    $id = "id=\"";
 
     for ($i=0; $i < $max; $i++) {
         if(strpos($list[$i],".") == true){
-            print $li .  $iconFile . $list[$i] . "</li>";
+            $idLi = substr($list[$i], 0, strpos($list[$i], "."));
+            print $li . "\"" . $id .$idLi. "\">". $iconFile . $list[$i] . "</li>";
         }
         else{
-            print $li . $iconFolder  .$list[$i] . "</li>";
+            print $li . "\"". $id. $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
   }
