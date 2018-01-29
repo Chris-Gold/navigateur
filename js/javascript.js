@@ -16,7 +16,7 @@ function listClick(id){
                 type: 'post',
                 success: function(output) {
                     $('ul').html(output);
-                    $("li").click(function(){
+                    $("li[id]").click(function(){
                         var id = $(this).attr('id');
                         listClick(id);
                     });                    
