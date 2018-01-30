@@ -38,8 +38,15 @@ function folder(){
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
     $id = "id=\"";
 
+//--------------------------------------------test-----------------------------------------------
+//is_dir($chemin + "/" + list[$i])  
+
+
+//--------------------------------------------test-----------------------------------------------
     for ($i=0; $i < $max; $i++) {
+
         $dotPos = strpos($list[$i],".");
+
         if($dotPos == true){
             print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
         }
