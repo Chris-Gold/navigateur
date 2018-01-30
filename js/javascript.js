@@ -36,7 +36,7 @@ function listClick(id){
     });
 }
 
-function inputPath(){
+function inputPath(inputPath){
     $.ajax({ url:'html/check.php',
         data: {action: 'search', chemin: chemin},
         type: 'post',
@@ -63,7 +63,7 @@ function inputPath(){
                           }));
                         $("#search").on('click', (function(){
                             var pathInput = $(this).val();
-                            inputPath();
+                            inputPath(pathInput);
                             BindEventHandlers();
                         }))
 
