@@ -30,22 +30,21 @@ function folder(){
 //--------------------------------------------test-----------------------------------------------
 //is_dir($chemin + "/" + list[$i])  
 
-
 //--------------------------------------------test-----------------------------------------------
     for ($i=0; $i < $max; $i++) {
-
+        $cheminTeste = $chemin . "/" . $list[$i];
         $dotPos = strpos($list[$i],".");
 
-        if($dotPos == true){
+        if($dotPos != 0 && is_file($cheminTeste)){
             print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
         }
-        if($dotPos === 0 && $list[$i] == ".."){
+        if($list[$i] == ".."){
             print $li . " folder\"". $id . $list[$i]. "\">"."<button class=\"btn btn-warning btn-lg btn-block\">Back_\o/</button>" ."</li>";
         }
         if($dotPos === 0 && $list[$i] != ".."){
             print "<li class=\"" . "d-none" .   "\">". $list[$i] . "</li>";
         }
-        elseif($dotPos == false && $list[$i] != ".."){
+        elseif($dotPos == false && $list[$i] != ".." && is_dir($cheminTeste) == true){
             print $li . " folder\"". $id . $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
