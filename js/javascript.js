@@ -1,6 +1,10 @@
 var chemin = '/var/www/navigateur'
 
+var cheminAfficher = chemin;
+
 function listClick(id){
+
+    cheminAfficher = cheminAfficher + "/" + id;
     chemin = chemin + "/" + id;
     $('#chemin').html(chemin);//affiche chemin le span d'id chemin
 
@@ -14,6 +18,10 @@ function listClick(id){
     });
 }
 
+function dirname(cheminAfficher) {
+      return cheminAfficher.match( '..' );
+      echo (cheminAfficher.match);
+ }
 
     $(document).ready(function(){
         $('#chemin').html(chemin);
