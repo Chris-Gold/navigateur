@@ -7,11 +7,32 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
-        case 'maj' :
-        maj();
+        case 'search' :
+        search();
         break;
     }
 }
+
+//--------------------------------------------test-----------------------------------------------
+
+function search(){
+    if(isset($_POST['chemin']) && !empty($_POST['chemin'])) {
+        $chemin = $_POST['chemin'];
+    }
+
+    if(scandir($chemin) == true){
+        folder();
+    }
+    elseif(scandir($chemin) == false){
+        echo "|p";
+    }
+
+}
+
+
+
+
+//--------------------------------------------test-----------------------------------------------
 
 function folder(){
 
@@ -27,13 +48,11 @@ function folder(){
     $iconFolder = "<i class=\"far fa-folder col-2\"></i>";
     $id = "id=\"";
 
-//--------------------------------------------test-----------------------------------------------
-//is_dir($chemin + "/" + list[$i])  
 
-//--------------------------------------------test-----------------------------------------------
     for ($i=0; $i < $max; $i++) {
+
         $cheminTeste = $chemin . "/" . $list[$i];//variable de test pour si c'est un fichier ou un dossier
-        $dotPos = strpos($list[$i],".");//position du point pour ne pas afficher les fichers caché ensuite
+        $dotPos = strpos($list[$i],".");// variable de position du point pour ne pas afficher les fichers caché ensuite
 
         if($dotPos != 0 && is_file($cheminTeste)){
             print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
