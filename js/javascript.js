@@ -36,6 +36,7 @@ function listClick(id){
     });
 }
 
+// navigation manuel
 function inputPath(){
     $.ajax({ url:'html/check.php',
         data: {action: 'search', chemin: chemin},
