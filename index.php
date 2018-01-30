@@ -4,24 +4,16 @@
             <?php include 'includes/header.html' ?>
             <title>Nyavigateur</title>
             <script src="js/javascript.js"></script>
-            <script>
-                $("li").click(function(){
-            alert ("fbgkesdlf,gmlskrt");
-            /*$.ajax({ url: 'html/check.php',
-                 data: {action: 'folderSuivant'},
-                 //type: 'post',
-                 success: function(output) {
-                            $('ul').html(output);
-                    }
-            });*/
-        });
-            </script>
+
         </head>
         <body>
             <h1 class="container text-center animated bounceInRight">NAVIGAJAXATOR</h1>
 
             <div class="container jumbotron">
-              <span id="chemin"></span>
+              <div id="url">
+                <input type="text" class="form-control" placeholder="Saisir le chemin" name="search">
+              </div>
+              <div id="chemin" class='col-12'></div>
                 <ul class="list-group text-center">
 
                 </ul>
