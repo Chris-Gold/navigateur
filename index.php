@@ -4,17 +4,13 @@
             <?php include 'includes/header.html' ?>
             <title>Nyavigateur</title>
             <script src="js/javascript.js"></script>
-            <script>
-                $("li").click(function(){
-            alert ("fbgkesdlf,gmlskrt");
-        });
-            </script>
+
         </head>
         <body>
             <h1 class="container text-center animated bounceInRight">NAVIGAJAXATOR</h1>
 
             <div class="container jumbotron">
-              <span id="chemin"></span>
+              <div id="chemin" class='col-12'></div>
                 <ul class="list-group text-center">
 
                 </ul>

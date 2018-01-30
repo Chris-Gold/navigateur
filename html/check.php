@@ -13,17 +13,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     }
 }
 
-/*function maj(){
-  $dom = new DOMDocument();
-  $dom->loadHTML($html);
-
-  $xpath = new DOMXPath($dom);
-  $divContent = $xpath->query('//span[id="chemin"]');
-
-  echo dirname($divContent, 2);
-}*/
-
-
 function folder(){
 
     if(isset($_POST['chemin']) && !empty($_POST['chemin'])) {
@@ -62,6 +51,5 @@ function folder(){
     }
 
   }
-
 
 ?>
