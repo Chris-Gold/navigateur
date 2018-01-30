@@ -13,6 +13,7 @@ function majChemin(){
 function listClick(id){
     cheminAfficher = cheminAfficher + "/" + id;
     chemin = chemin + "/" + id;
+    $('#chemin').html(chemin);//affiche chemin le span d'id chemin
     var testId = id;
     if(testId == '..' ){
       majChemin();//efface le premier "/"
