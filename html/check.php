@@ -32,8 +32,8 @@ function folder(){
 
 //--------------------------------------------test-----------------------------------------------
     for ($i=0; $i < $max; $i++) {
-        $cheminTeste = $chemin . "/" . $list[$i];
-        $dotPos = strpos($list[$i],".");
+        $cheminTeste = $chemin . "/" . $list[$i];//variable de test pour si c'est un fichier ou un dossier
+        $dotPos = strpos($list[$i],".");//position du point pour ne pas afficher les fichers caché ensuite
 
         if($dotPos != 0 && is_file($cheminTeste)){
             print $li . " file" .  "\">". $iconFile . $list[$i] . "</li>";
