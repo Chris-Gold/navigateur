@@ -7,8 +7,21 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'folder' :
         folder();
         break;
+        case 'maj' :
+        maj();
+        break;
     }
 }
+
+/*function maj(){
+  $dom = new DOMDocument();
+  $dom->loadHTML($html);
+
+  $xpath = new DOMXPath($dom);
+  $divContent = $xpath->query('//span[id="chemin"]');
+
+  echo dirname($divContent, 2);
+}*/
 
 
 function folder(){
@@ -40,6 +53,7 @@ function folder(){
             print $li . " folder\"". $id . $list[$i]. "\">". $iconFolder  .$list[$i] . "</li>";
         }
     }
+
   }
 
 
