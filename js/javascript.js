@@ -2,7 +2,8 @@ var chemin = '/var/www/navigateur'
 
 function listClick(id){
     chemin = chemin + "/" + id;
-    $('#chemin').html(chemin);
+    $('#chemin').html(chemin);//affiche chemin le span d'id chemin
+
     $.ajax({ url: 'html/check.php',
         data: {action: 'folder', chemin: chemin},
         type: 'post',

@@ -7,13 +7,6 @@
             <script>
                 $("li").click(function(){
             alert ("fbgkesdlf,gmlskrt");
-            /*$.ajax({ url: 'html/check.php',
-                 data: {action: 'folderSuivant'},
-                 //type: 'post',
-                 success: function(output) {
-                            $('ul').html(output);
-                    }
-            });*/
         });
             </script>
         </head>
