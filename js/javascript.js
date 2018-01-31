@@ -38,6 +38,36 @@ function listClick(id){
 
 // URL Manuel
 
+//Fonction sur le bouton search au clic
+function listClick2(inputPath){
+    chemin = inputPath;
+
+    $('#chemin').html(chemin);//affiche chemin le span d'id chemin
+
+    if(chemin != '' ){
+
+        //majChemin();//efface la chaine precedente
+        $('#chemin').html(chemin);
+        new Audio('sound/no.mp3').play();
+    }
+    else {
+
+        $('#chemin').html(chemin);//affiche chemin dans span d'id chemin
+        new Audio('sound/yes.mp3').play();
+    }
+
+    //Navigation dans le dossier
+    $.ajax({ url: 'html/check.php',
+        data: {action: 'folder', chemin: inputPath},
+        type: 'post',
+        success: function(output) {
+            $('ul').html(output);
+        }
+    });
+}
+
+// Champ de saisie
+
 function inputPath(inputPath){
     $.ajax({ url:'html/check.php',
         data: {action: 'search', chemin: chemin},
@@ -47,7 +77,7 @@ function inputPath(inputPath){
         }
     })
 
-    listClick(inputPath);
+    listClick2(inputPath);
 
 }
 
@@ -68,16 +98,13 @@ function inputPath(inputPath){
                           }));
                         $("#search").on('click', (function(){
 
-                            var pathInput = $('#urllink').val();
-
+                            var pathInput = $('#urlLink').val();
                             inputPath(pathInput);
                             BindEventHandlers();
                         }))
 
                     }, 1000);
+
                 }
             });
-
         });
-
-});
