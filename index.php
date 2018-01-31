@@ -10,7 +10,7 @@
 
             <div class="container jumbotron">
                         <div id="url" class="input-group mb-3">
-                        <input id="urllink" type="text" class="form-control" placeholder="Saisir le chemin" name="search">
+                        <input id="urlLink" type="text" class="form-control" placeholder="Saisir le chemin" name="search">
                         <div class="input-group-append">
                             <button id="search" type="button" class="btn btn-dark">Valider</button>
                         </div>
