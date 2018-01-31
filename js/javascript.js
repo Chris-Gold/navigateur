@@ -51,33 +51,27 @@ function inputPath(inputPath){
 
 }
 
-    $(document).ready(function(){
-        new Audio('sound/chant.mp3').play();
-        $('#chemin').html(chemin);
-        $.ajax({ url: 'html/check.php',
-                data: {action: 'folder', chemin: chemin},
-                type: 'post',
-                success: function(output) {
-                    $('ul').html(output);
-                    setInterval(function(){//permet de recliquer
+$(document).ready(function(){
+    new Audio('sound/chant.mp3').play();
+    $('#chemin').html(chemin);
+    $.ajax({ url: 'html/check.php',
+            data: {action: 'folder', chemin: chemin},
+            type: 'post',
+            success: function(output) {
+                $('ul').html(output);
+                setInterval(function(){//permet de recliquer
 
-                        $("li[id]").on('click',(function(){
-                            var id = $(this).attr('id');
-                            listClick(id);
-                            BindEventHandlers();//provoque une erreur qui stope la boucle
-                          }));
-                        $("#search").on('click', (function(){
-
-                            var pathInput = $('#urllink').val();
-
-                            inputPath(pathInput);
-                            BindEventHandlers();
-                        }))
-
-                    }, 1000);
-                }
-            });
-
-        });
-
+                    $("li[id]").on('click',(function(){
+                        var id = $(this).attr('id');
+                        listClick(id);
+                        BindEventHandlers();//provoque une erreur qui stope la boucle
+                      }));
+                    $("#search").on('click', (function(){
+                        var pathInput = $('#urllink').val();
+                        inputPath(pathInput);
+                        BindEventHandlers();
+                      }))
+                  }, 1000);
+              }
+      });
 });
