@@ -35,7 +35,9 @@ function listClick(id){
         }
     });
 }
+
 // URL Manuel
+
 function inputPath(inputPath){
     $.ajax({ url:'html/check.php',
         data: {action: 'search', chemin: chemin},
@@ -44,7 +46,9 @@ function inputPath(inputPath){
             $('ul').html(output);
         }
     })
+
     listClick(inputPath);
+
 }
 
     $(document).ready(function(){
@@ -63,7 +67,9 @@ function inputPath(inputPath){
                             BindEventHandlers();//provoque une erreur qui stope la boucle
                           }));
                         $("#search").on('click', (function(){
+
                             var pathInput = $('#urllink').val();
+
                             inputPath(pathInput);
                             BindEventHandlers();
                         }))
@@ -71,4 +77,7 @@ function inputPath(inputPath){
                     }, 1000);
                 }
             });
+
         });
+
+});
