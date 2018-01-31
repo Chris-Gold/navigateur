@@ -67,7 +67,7 @@ $(document).ready(function(){
                         BindEventHandlers();//provoque une erreur qui stope la boucle
                       }));
                     $("#search").on('click', (function(){
-                        var pathInput = $('#urllink').val();
+                        var pathInput = $('#urlLink').val();
                         inputPath(pathInput);
                         BindEventHandlers();
                       }))
