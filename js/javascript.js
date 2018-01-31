@@ -81,6 +81,7 @@ function inputPath(inputPath){
 
 }
 
+
     $(document).ready(function(){
         new Audio('sound/chant.mp3').play();
         $('#chemin').html(chemin);
