@@ -16,9 +16,16 @@
                         </div>
                     </div>
                 <div id="chemin" class='col-12'></div>
-                    <ul class="list-group text-center">
+                    <ul id="ul0" class="list-group text-center">
                 </ul>
             </div>
+
+            <div id="popup" class="popup panel panel-primary">
+                <span class="close"></span>
+                <img class="modal-content" id="forbidden">
+                <div id="caption"></div>
+            </div>
+
             <?php include 'includes/base_js.html' ?>
         </body>
     </html>

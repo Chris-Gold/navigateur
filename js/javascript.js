@@ -40,19 +40,19 @@ function listClick(id){
 
 //Fonction sur le bouton search au clic
 function listClick2(inputPath){
-    chemin = inputPath;
+    var chemin1 = inputPath;
 
-    $('#chemin').html(chemin);//affiche chemin le span d'id chemin
+    $('#chemin').html(chemin1);//affiche chemin le span d'id chemin
 
-    if(chemin != '' ){
+    if(chemin1 != '' ){
 
         //majChemin();//efface la chaine precedente
-        $('#chemin').html(chemin);
+        $('#chemin').html(chemin1);
         new Audio('sound/no.mp3').play();
     }
     else {
 
-        $('#chemin').html(chemin);//affiche chemin dans span d'id chemin
+        $('#chemin').html(chemin1);//affiche chemin dans span d'id chemin
         new Audio('sound/yes.mp3').play();
     }
 
@@ -77,7 +77,17 @@ function inputPath(inputPath){
         }
     })
 
-    listClick2(inputPath);
+    if( $("#ul0").children().length > 0) {
+        listClick2(inputPath);
+    }
+    else{
+        alert("Boulet!!!");
+        inputPath(chemin);
+        listClick(id);
+}
+
+
+
 
 }
 
@@ -98,9 +108,21 @@ function inputPath(inputPath){
                             BindEventHandlers();//provoque une erreur qui stope la boucle
                           }));
                         $("#search").on('click', (function(){
-
                             var pathInput = $('#urlLink').val();
-                            inputPath(pathInput);
+                                if(pathInput != ''){
+                                inputPath(pathInput);
+                                }
+/*                                if( $("#ul0").children().length > 0) {
+
+                                inputPath(pathInput);
+
+                                }
+                                else{
+                                    alert("Boulet!!!");
+                                inputPath(chemin);
+                                listClick(id);
+                            }*/
+
                             BindEventHandlers();
                         }))
 
@@ -109,3 +131,27 @@ function inputPath(inputPath){
                 }
             });
         });
+
+// popup
+// Get the modal
+/*function popup(){
+var popup = document.getElementById('popup');
+
+    var popupImg = "images/forbidden.png";
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    forbidden();
+    function forbidden(){
+        popup.style.display = "block";
+        popupImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        popup.style.display = "none";
+    }
+}
+popup();
+*/
