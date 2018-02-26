@@ -31,7 +31,7 @@ function listClick(id){
         data: {action: 'folder', chemin: chemin},
         type: 'post',
         success: function(output) {
-            $('ul').html(output);
+          $('ul').html(output);
         }
     });
 }
@@ -62,6 +62,7 @@ function listClick2(inputPath){
         type: 'post',
         success: function(output) {
             $('ul').html(output);
+
         }
     });
 }
@@ -102,7 +103,7 @@ function inputPath(inputPath){
                     $('ul').html(output);
                     setInterval(function(){//permet de recliquer
 
-                        $("li[id]").on('click',(function(){
+                        $("li[id]").on('click', (function(){
                             var id = $(this).attr('id');
                             listClick(id);
                             BindEventHandlers();//provoque une erreur qui stope la boucle
@@ -126,7 +127,7 @@ function inputPath(inputPath){
                             BindEventHandlers();
                         }))
 
-                    }, 1000);
+                    //}, 1000);
 
                 }
             });
